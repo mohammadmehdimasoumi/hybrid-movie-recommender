@@ -1,26 +1,45 @@
-# 🎬 Movie Recommendation System
+# 🎬 Hybrid Movie Recommendation System
 
-A machine learning-based movie recommendation system using collaborative filtering (Pearson Correlation).
+A machine learning-based movie recommender system that combines **Collaborative Filtering** and **Content-Based Filtering** to generate personalized movie recommendations.
 
----
-
-## 🚀 Overview
-
-This project recommends movies to users based on their past ratings using a **user-based collaborative filtering algorithm**.
-
-It analyzes user similarity and generates personalized movie recommendations.
+The project also includes a **Streamlit web app** for interactive usage.
 
 ---
 
-## 🧠 Techniques Used
+## 🚀 Features
 
-- Data Preprocessing (Pandas)
-- User-Based Collaborative Filtering
-- Pearson Correlation Similarity
-- Weighted Rating Calculation
-- Evaluation (Hit Rate @K)
+- 👥 User-based Collaborative Filtering (Pearson Correlation)
+- 🎞️ Content-Based Filtering using TF-IDF
+- 🔀 Hybrid recommendation system (weighted scoring)
+- 🌐 Interactive Streamlit UI
+- 📊 Real-time movie recommendations
+- 🧠 End-to-end ML pipeline (preprocessing → model → UI)
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Tech Stack
 
+- Python 🐍
+- Pandas & NumPy
+- Scikit-learn
+- Streamlit
+- Machine Learning (Recommender Systems)
+
+---
+
+## 🚀 How to Run
+
+```bash
+git clone https://github.com/mohammadmehdimasoumi/hybrid-movie-recommender.git
+cd hybrid-movie-recommender
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+
+---
+
+## 👤 Author
+
+Mohammad Mehdi Masoumi
+
+- GitHub: https://github.com/mohammadmehdimasoumi  
+- Instagram: [@ctonm](https://instagram.com/ctonm)
