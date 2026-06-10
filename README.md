@@ -34,7 +34,7 @@ git clone https://github.com/mohammadmehdimasoumi/hybrid-movie-recommender.git
 cd hybrid-movie-recommender
 pip install -r requirements.txt
 streamlit run streamlit_app.py
-
+'''
 ---
 
 ## 👤 Author
