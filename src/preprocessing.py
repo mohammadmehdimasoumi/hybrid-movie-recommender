@@ -23,7 +23,7 @@ def load_data(movies_path="data/movies.csv", ratings_path="data/ratings.csv"):
     # Strip spaces
     movies["title"] = movies["title"].str.strip()
 
-    # Drop genres column (optional for content-based later we may use it)
+    # Drop genres column (optional)
     if "genres" in movies.columns:
         movies = movies.drop("genres", axis=1)
 
@@ -31,16 +31,28 @@ def load_data(movies_path="data/movies.csv", ratings_path="data/ratings.csv"):
     # Clean ratings dataset
     # ----------------------------
 
-    # Drop timestamp (not needed)
     if "timestamp" in ratings.columns:
         ratings = ratings.drop("timestamp", axis=1)
+
+    # ----------------------------
+    # Feature engineering
+    # ----------------------------
+
+    if "genres" in movies.columns:
+        movies["content"] = movies["title"].fillna("") + " " + movies["genres"].fillna("")
+    else:
+        movies["content"] = movies["title"].fillna("")
 
     return movies, ratings
 
 
+# ----------------------------
 # Test run
+# ----------------------------
 if __name__ == "__main__":
     movies, ratings = load_data()
     print("Movies shape:", movies.shape)
     print("Ratings shape:", ratings.shape)
     print(movies.head())
+
+
