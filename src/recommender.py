@@ -120,3 +120,4 @@ class MovieRecommender:
         return self.movies[
             self.movies["movieId"].isin(recommendation_df.head(top_k)["movieId"])
         ]
+
